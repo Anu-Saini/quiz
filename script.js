@@ -7,8 +7,9 @@ const answerbuttonElement = document.getElementById('answer-buttons');
 
 
 let currentQuestionIndex , shuffledQuestion; 
+let hasTimerStarted=false;
+startbutton.addEventListener('click', startGame);
 
-startbutton.addEventListener('click', startGame)
 nextbutton.addEventListener('click', () => {
         currentQuestionIndex++
         setnextQues()
@@ -33,7 +34,7 @@ function setnextQues() {
 function showQuestion(question) {
         questionElement.innerText = question.question
         question.answers.forEach(answer => {
-                const button = document.createElement('button');
+                const button = document.createElement('a');
                 button.innerText=answer.text;
                 button.classList.add('btn');
                 if(answer.correct){
@@ -69,6 +70,7 @@ function selectAnswer (e) {
         }
         
 }
+
 var right=0;
 function setStatusClass(element,correct) {
         clearStatusClass(element);
@@ -145,7 +147,10 @@ const questions = [ {
         }        
 ]
 function timerclock () {
- var count=100;
+ if (!hasTimerStarted) {
+
+ 
+        var count=5000;
  var interval = setInterval(function() {
         document.getElementById("counter").innerHTML = count;
    count--;
@@ -156,7 +161,8 @@ function timerclock () {
  alert("you are out of time");       
    }
 }, 1000);
-}
+hasTimerStarted=true;
+}};
 
                
           
