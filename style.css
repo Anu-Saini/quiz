@@ -1,0 +1,129 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+:root{
+   background-color: #ecf5ff;
+   font-size: 100%;
+
+}
+body {
+        --hue: var(--hue-neutral);
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        }
+
+
+
+body.correct {
+         --hue:var(--hue-correct);
+        }
+body.wrong {
+         --hue:var(--hue-wrong);
+        }
+section {
+       
+        display: flex;
+        justify-content: center;
+} 
+.box{
+        float:right;
+        width: 40%;
+        height:70px;
+        margin: 0px;
+        padding: 8px;
+        background-color: aqua;
+        display: inline;
+           
+  }
+
+  .box p {
+      float: right;    
+  }
+.box1 {
+       float:left;
+       width: 60%;
+       height:70px;
+       margin: 0px;
+       padding: 8px;
+       background-color: aqua;
+      display: inline;
+     
+       }
+.container {
+        display:flex;   
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: auto;
+        margin: 0 auto;
+        width:950px;
+        height: 350px;
+        max-width:70%;
+         background-color: aliceblue;
+        padding: 20px 5px;
+         box-shadow:  0 0 10px 2px;               ;
+        }
+.container > * {
+        width:100%;
+}
+
+.flex-column {
+        padding:20px;
+         display: flex;
+         flex-direction: column;
+         gap:12px;
+         margin-top: 20px;
+         margin: 0 auto;
+        justify-content: center ;
+        width: 50%;; 
+        }
+
+.btn {
+        font-size: 1.8rem;
+         border-radius: 10px;
+        padding: 10px 5px;
+        width: 20rem;
+        text-align: center;
+        border: 2px solid blue;
+        margin-bottom: 16px;
+        color:white;
+         outline: none;
+        }
+
+
+.btn:hover {
+        border: 2px;
+
+        color: black;
+        }
+.btn.correct{
+         --hue:var(--hue-correct);
+         color: black;
+        }
+.btn.wrong {
+         --hue:var(--hue-wrong);
+        }
+.start-btn, .next-btn {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding:  10px 20px;
+       
+        }
+.controls{
+        display: block;
+        justify-content:center; 
+        align-items: center;
+        }
+.hide {
+      display: none;
+      }
+#counter {
+       width:100%;
+        justify-content: right;
+        align-items:flex-end;
+}
