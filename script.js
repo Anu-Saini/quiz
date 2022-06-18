@@ -90,25 +90,25 @@ function clearStatusClass(element) {
 
 
 const questions = [ {
-                question: "A very useful tool used during development and debugging for printing content to the debugger is :",
+                question: "Ques.  A very useful tool used during development and debugging for printing content to the debugger is :",
                 answers :[
-                        {text:'1. JavaScript', correct :false},
-                        {text:'2. terminal/bash', correct :false},
-                        {text:'3. for loops', correct :false },
-                        {text:'4. console log', correct :true},                       
+                        {text:'JavaScript', correct :false},
+                        {text:'terminal/bash', correct :false},
+                        {text:'for loops', correct :false },
+                        {text:'console log', correct :true},                       
                 ]
         },
         {
-                question: " Commonly used data types DO NOT Include : ",
+                question: "Ques.   Commonly used data types DO NOT Include : ",
                 answers :[
-                        {text:'1. Strings', correct :false},
-                        {text:'2. booleans', correct :false},
-                        {text:'3. alerts', correct :true },
-                        {text:'4. numbers', correct :false},                       
+                        {text:'Strings', correct :false},
+                        {text:'booleans', correct :false},
+                        {text:'alerts', correct :true },
+                        {text:'numbers', correct :false},                       
                 ]
         },
         {
-                question: "The condition in an if/else statement is enclosed within ________ ?",
+                question: "Ques.  The condition in an if/else statement is enclosed within ________ ?",
                 answers :[
                         {text:'quotes', correct :false},
                         {text:'curly brackets', correct :true},
@@ -117,7 +117,7 @@ const questions = [ {
                 ]
         },
         {
-                question: "Arrays in javascript can be used to store ______ ",
+                question: "Ques.  Arrays in javascript can be used to store ______ ",
                 answers :[
                         {text:'number & strings', correct :false},
                         {text:'other arrays', correct :false},
@@ -126,7 +126,7 @@ const questions = [ {
                 ]
         },
         {
-                question: "String values must be enclosed within _____ when being assigned to variables?",
+                question: "Ques.  String values must be enclosed within _____ when being assigned to variables?",
                 answers :[
                         {text:'commas', correct :false},
                         {text:'curley brackets', correct :false},
@@ -135,23 +135,14 @@ const questions = [ {
                 ]
         },
         {
-                question: "An example of non closing tags will be",
+                question: "Ques.  An example of non closing tags will be",
                 answers :[
                         {text:'p', correct :false},
                         {text:'html', correct :false},
                         {text:'body', correct :false },
                         {text:'img', correct :true},                       
                 ]
-        },
-        {
-                question: "",
-                answers :[
-                        {text:'commas', correct :false},
-                        {text:'curley brackets', correct :false},
-                        {text:'quotes', correct :true },
-                        {text:'parantheses', correct :false},                       
-                ]
-        }
+        }        
 ]
 function timerclock () {
  var count=100;

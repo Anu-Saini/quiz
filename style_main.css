@@ -44,16 +44,16 @@ body.wrong {
         margin-top: auto;
         margin: 0 auto;
         width:800px;
-        height: 300px;
+        height: 400px;
         max-width:70%;
-         background-color: aliceblue;
+         background-color: rgb(11, 46, 76);
         padding: 20px 5px;
          box-shadow:  0 0 10px 2px;               ;
         }
 .flex-column {
         display: flex;
         flex-direction: column; 
-        width: 50%;  
+        width: 70%;  
 }
         
 .btn-grid {
@@ -65,11 +65,11 @@ body.wrong {
 
 .btn {
          --hue:var(--hue-neutral);
-        background-color: hsl(var(--hue),100%,50%);
+         background-color: hsl(var(--hue),100%,50%);
         border: 1px solid hsl(var(--hue),100%,30%);
          border-radius: 10px;
         padding: 10px 5px;
-         color:white;
+        color:black;
          outline: none;
         }
 

@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body class="wrong">
         <section>
                 <div class="box1">
                         <p> High Score :  <span id="highscore"></span> </p>
@@ -19,29 +19,23 @@
          <p> Score :  <span id="score"></span> <br> Time Left : <span id="counter"> 20</span> Secs</p>
         </div> 
 </section>
-
 <div class="container">
-       <div id="game" class="justify-center flex-column">      
-            <h2 id="question">Question </h2>
-             <div class ="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choice-text">choice 1</p>
-             </div>
-             <div class ="choice-container">
-                <p class="choice-prefix">B</p>
-                <p class="choice-text">choice 2</p>
-             </div>
-             <div class ="choice-container">
-                <p class="choice-prefix">C</p>
-                <p class="choice-text">choice 3</p>
-             </div>
-             <div class ="choice-container">
-                <p class="choice-prefix">D</p>
-                <p class="choice-text">choice 4</p>
-             </div>        
-        </div>
+       <div id="question-container" class="hide">      
+            <div id="question">Question </div>
+            <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+       </div>
+      
 </div>
-
+<div class="controls">
+        <button id="start-btn" class="start-btn btn"> Start</button>
+        <button id="next-btn" class="snext-btn btn hide"> Next</button>
+              
+        </div>        
+        </div>
       
 <script defer src="script.js"></script>
 </body>

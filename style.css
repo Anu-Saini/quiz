@@ -4,17 +4,19 @@
 }
 
 :root{
-   background-color: #ecf5ff;
-   font-size: 100%;
-
-}
+   --hue-neutral:200;
+   --hue-wrong:0;
+   --hue-correct:145;
+  }
 body {
         --hue: var(--hue-neutral);
-        padding: 0;
+         padding: 0;
         margin: 0;
         justify-content: center;
         align-items: center;
         width: 100vw;
+        height: 100vh;
+        background-color: aliceblue;
         }
 
 
@@ -55,46 +57,51 @@ section {
      
        }
 .container {
-        display:flex;   
+        display:block;   
         justify-content: center;
         align-content: center;
         text-align: center;
         margin-top: auto;
         margin: 0 auto;
-        width:950px;
-        height: 350px;
-        max-width:70%;
+        width:800px;
+        height: 400px;
+        max-width:80%;
          background-color: aliceblue;
+         border-radius: 0 0 10px 10px  ;
         padding: 20px 5px;
          box-shadow:  0 0 10px 2px;               ;
         }
-.container > * {
-        width:100%;
-}
 
 .flex-column {
-        padding:20px;
+        padding:10px;
          display: flex;
          flex-direction: column;
-         gap:12px;
+         gap:5px;
          margin-top: 20px;
          margin: 0 auto;
         justify-content: center ;
-        width: 50%;; 
+        width: 70%;
         }
 
 .btn {
-        font-size: 1.8rem;
-         border-radius: 10px;
-        padding: 10px 5px;
-        width: 20rem;
+        font:.07rem;
+        border-radius: 10px;
+        margin-top: 15px;
+        padding: 06px 5px;
+        width: 15rem;
         text-align: center;
         border: 2px solid blue;
-        margin-bottom: 16px;
-        color:white;
+        margin-bottom: 10px;
+        color :black;
+        background-color: rgb(134, 134, 236);
          outline: none;
         }
 
+.btn-grid {
+        display:grid;
+        justify-content: center;
+
+                }
 
 .btn:hover {
         border: 2px;
@@ -111,11 +118,11 @@ section {
 .start-btn, .next-btn {
         font-size: 1.5rem;
         font-weight: bold;
-        padding:  10px 20px;
+        padding:  15px 5px;
        
         }
 .controls{
-        display: block;
+        display: flex;
         justify-content:center; 
         align-items: center;
         }
