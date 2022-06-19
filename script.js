@@ -4,11 +4,16 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerbuttonElement = document.getElementById('answer-buttons');
 const totalSeconds = 5000;
+const scoreStatus = document.getElementById("score-status");
 document.getElementById("counter").innerText = totalSeconds;
+scoreStatus.classList.add('hide');
+document.getElementById("high-score-status").classList.add('hide');
+
 
 
 let currentQuestionIndex, shuffledQuestion;
 let isTimerStarted = false;
+
 document.getElementById("incorrect").classList.add('hide');
 document.getElementById("correct").classList.add('hide');
 document.getElementById("status").classList.add('hide');
@@ -20,8 +25,16 @@ nextbutton.addEventListener('click', () => {
 })
 
 
+document.getElementById("submit-btn").addEventListener('click', () => {
+    scoreStatus.classList.add('hide');
+    document.getElementById("high-score-status").classList.remove('hide');
+    const initial = document.getElementById("initial").value;
+    document.getElementById("high-score").innerText = `${initial}: ${right}`;
+})
+
 function startGame() {
     document.getElementById("status").classList.remove('hide');
+
     timerclock();
     startbutton.classList.add('hide');
     shuffledQuestion = questions.sort(() => Math.random() - .5);
@@ -32,6 +45,7 @@ function startGame() {
 }
 
 let index = 0;
+var right = 0;
 
 function setnextQues(questionSet) {
 
@@ -40,6 +54,8 @@ function setnextQues(questionSet) {
         showQuestion(questionSet[index]);
     else {
         questionContainerElement.classList.add("hide");
+        scoreStatus.classList.remove('hide');
+        document.getElementById("final-score").innerText = `You final score is: ${right}`;
     }
     index++;
 }
@@ -85,7 +101,7 @@ function selectAnswer(e) {
     }
 
 }
-var right = 0;
+
 
 function setStatusClass(selectedbutton) {
     document.getElementById("status").classList.remove('hide');
