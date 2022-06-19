@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-        
-        <title>Quiz Me</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+
+    <title>Quiz Me</title>
 
 </head>
 
 <body class="wrong">
-        <section>
-                <div class="box1">
-                        <p> High Score :  <span id="highscore"></span> </p>
-                </div>
+    <section>
+        <div class="box1">
+            <p> High Score : <span id="highscore"></span> </p>
+        </div>
         <div class="box">
-         <p> Score :  <span id="score"></span> <br> Time Left : <span id="counter"> 20</span> Secs</p>
-        </div> 
-</section>
-<div class="container">
-       <div id="question-container" class="hide">      
+            <p> Score : <span id="score"></span> <br> Time Left : <span id="counter"></span> Secs</p>
+        </div>
+    </section>
+    <div class="container">
+        <div id="question-container" class="hide">
             <div id="question">Question </div>
             <div id="answer-buttons" class="btn-grid">
-        <a class="btn">Answer 1</a>
-        <a class="btn">Answer 2</a>
-        <a class="btn">Answer 3</a>
-        <a class="btn">Answer 4</a>
-       </div>
-      
-</div>
-<div class="controls">
-        <a id="start-btn" class="start-btn btn"> Start</a>
-        <a id="next-btn" class="snext-btn btn hide"> Next</a>
-              
-        </div>        
+                <a class="btn">Answer 1</a>
+                <a class="btn">Answer 2</a>
+                <a class="btn">Answer 3</a>
+                <a class="btn">Answer 4</a>
+            </div>
         </div>
-      
-<script defer src="script.js"></script>
+        <div id="status" class="status">
+            <span id="correct">Right</span>
+            <span id="incorrect">Wrong</span>
+        </div>
+        <div class="controls">
+            <a id="start-btn" class="start-btn btn"> Start</a>
+            <a id="next-btn" class="snext-btn btn hide"> Next</a>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
 </body>
+
 </html>
