@@ -59,8 +59,10 @@ function showQuestion(question) {
 }
 
 function resetState() {
+
     clearStatusClass(document.body);
     nextbutton.classList.add("hide");
+    document.getElementById("status").classList.add('hide');
     while (answerbuttonElement.firstChild) {
         answerbuttonElement.removeChild(answerbuttonElement.firstChild);
     }
@@ -86,10 +88,11 @@ function selectAnswer(e) {
 var right = 0;
 
 function setStatusClass(selectedbutton) {
-
+    document.getElementById("status").classList.remove('hide');
     ///clearStatusClass(element);
     if (selectedbutton.dataset.correct) {
         selectedbutton.classList.add('correct')
+
         document.getElementById("incorrect").classList.add('hide');
         document.getElementById("correct").classList.remove('hide');
         right++;
@@ -97,8 +100,8 @@ function setStatusClass(selectedbutton) {
     } else {
         selectedbutton.classList.add('wrong');
         selectedbutton.classList.add('correct')
-        document.getElementsByClassName("incorrect")[0].classList.remove('hide');
-        document.getElementsByClassName("correct")[0].classList.Add('hide');
+        document.getElementById("incorrect").classList.remove('hide');
+        document.getElementById("correct").classList.add('hide');
 
 
     }
