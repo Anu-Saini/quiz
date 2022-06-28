@@ -1,12 +1,18 @@
 //Date today in
 //Date today in
-var now = moment().format("dddd, MMMM Do YYYY, h:mm a");
+var now = moment("6/26/2022, 11.30", "MM-DD-YYYY,h:mm a").format("dddd, MMMM Do YYYY, h:mm a");
 $("#currentDay").text(now);
+
+
+//var reformatDate = moment("11/3/20", "MM-DD-YY").format("dddd, MMMM Do YYYY, h:mm:ss a");
+//$("#3a").text(reformatDate);
+
+
 
 var events_ = [
   {
-    start: "Sun Jun 26 2022 09:00:00",
-    end: "Sun Jun 26 2022 09:30:00",
+    start: "Tue Jun 28 2022 10:00:00",
+    end: "Tue Jun 28 2022 10:30:00",
     isFinished: true,
     description: "to_market_for_shopping",
   },
