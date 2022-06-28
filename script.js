@@ -41,7 +41,7 @@ var events_ = [
     description: "icecream",
   },
 ];
-var events = localStorage.getItem(events) ?  localStorage.getItem(events) : events_;
+var events = localStorage.events ?  JSON.parse(localStorage.events) : events_;
 function assignTask() {
 
   events.forEach((x) => {
@@ -50,7 +50,7 @@ function assignTask() {
       const endTime = moment(x.end).format("H");
       var row = document.getElementsByClassName("col-10");
       for (var i = 0; i < row.length; i++) {
-        const id = row[i].id;
+        const id = row[i].children.length > 0 ? row[i].children[0].id : "";
         if (id === `event${startTime}`) {
           document.getElementById(id).innerText = x.description;
           if (
@@ -82,6 +82,8 @@ $(".fa-save").click(function () {
   const id = `event${this.parentNode.id.replace("save", "")}`;
   const hour = `${this.parentNode.id.replace("save", "")}`;
   const text = document.getElementById(id).value;
+  const newDate = moment().format('ddd MMM D YYYY') + ` ${hour}:00:00`;
+
   let updated = false;
   events.forEach((x) => {
     if (moment(x.start).format("DD/MM/YY") == moment().format("DD/MM/YY")) {
@@ -89,7 +91,7 @@ $(".fa-save").click(function () {
       if(hour === startTime)
       {
         x.description = text;
-        localStorage.setItem('events', events);
+        localStorage.setItem('events', JSON.stringify(events));
         updated = true;
       } 
 
@@ -97,14 +99,18 @@ $(".fa-save").click(function () {
   });
   if(!updated)
   {
+    
+
     const event = {
-      start: new Date(),
-      end: new Date(),
+      start:  newDate,  //change the format
+      end:  moment(newDate).add(1, 'hours'),
       isFinished: false,
       description: text,
     }
     events.push(event);
-    localStorage.setItem('events', events);
+    localStorage.setItem('events', JSON.stringify(events));
   }
+  document.getElementById(id).readOnly = true;
   assignTask();
+  
 });
