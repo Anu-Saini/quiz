@@ -3,16 +3,22 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  height: auto;
+ width: 100%;
+ height: 100vh;
+ top: 0;
+ bottom:0;
+
 }
+
 
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: black;
   border-left: 1px solid black;
   padding: 20px;
+
 }
 
 .jumbotron {
@@ -21,6 +27,11 @@ textarea {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  height: 250px;
+}
+header{
+  padding-top: 10px;
+  margin: 10px;
 }
 
 .description {
@@ -34,10 +45,11 @@ textarea {
 
 .row {
   white-space: pre-wrap;
-  height: auto;
+  height:auto;
   border: 1px  solid black;
   border-left: none;
   border-radius: 0 8px 8px 0  ;
+  color: Black;
 }
 
 .col-10 {
@@ -53,20 +65,20 @@ textarea {
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 .fa, .fa-save {
   margin-top: 40px;
   margin-right: 10px;
 }
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #d0281f;
+  color: black;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #11d911;
+  color: black;
 }
 
 .saveBtn {
@@ -96,9 +108,7 @@ textarea {
  textarea, .jumbotron {
   background-color: #ff6961;
  }
- body{
-  size: 75%;
- }
+
 
   /* Change the header background */
   header {
@@ -108,5 +118,7 @@ textarea {
   #save12, #save7, #save13, #save14, #save15, #save16, #save17, #save8, #save9, #save10, #save11 {
     background-color: #2ba059;
   }
-
-
+  .jumbotron{
+  height: 400px;
+  }
+}

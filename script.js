@@ -1,58 +1,59 @@
 //Date today in
-//Date today in
-var now = moment("6/26/2022, 11.30", "MM-DD-YYYY,h:mm a").format("dddd, MMMM Do YYYY, h:mm a");
+var now = moment().format("dddd, MMMM Do YYYY, h:mm a");
 $("#currentDay").text(now);
 
+//var now = moment().format("ddd MMM DD YYYY H:mm");
+//$("#currentDay").text(now);
 
-//var reformatDate = moment("11/3/20", "MM-DD-YY").format("dddd, MMMM Do YYYY, h:mm:ss a");
-//$("#3a").text(reformatDate);
-
-
-
-var events_ = [
+console.log(now)
+var events_= [  //changed var name
   {
-    start: "Tue Jun 28 2022 10:00:00",
-    end: "Tue Jun 28 2022 10:30:00",
-    isFinished: true,
+    start: "Thu Jun 30 2022 08:00:00",
+    end: "Thu Jun 30 2022 08:45:00",
+    isFinished: false,
     description: "to_market_for_shopping",
   },
   {
-    start: "Sun Jun 26 2022 10:30:00",
-    end: "Sun Jun 26 2022 11:30:00",
-    isFinished: true,
-    description: "car_rego",
-  },
-  {
-    start: "Sun Jun 26 2022 11:00:00",
-    end: "Sun Jun 26 2022 12:00:00",
-    isFinished: true,
-    description: "car washing",
-  },
-  {
-    start: "Sun Jun 26 2022 12:00:00",
-    end: "Sun Jun 26 2022 14:00:00",
+    start: "Thu Jun 30 2022 10:00:00",
+    end: "Thu Jun 30 2022 10:30:00 ",
     isFinished: false,
-    description: "car rego payment",
+    description: "car_rego payment arrangement",
   },
   {
-    start: "Sun Jun 26 2022 13:00:00",
-    end: "Sun Jun 26 2022 13:20:00",
+    start: "Thu Jun 30 2022 11:30:00",
+    end: "Thu Jun 30 2022 12:30:00",
     isFinished: false,
-    description: "study",
+    description: "car washing@ cleancar bay",
   },
   {
-    start: "Sun Jun 26 2022 15:00:00",
-    end: "Sun Jun 26 2022 16:00:00",
+    start: "Thu Jun 30 2022 12:00:00",
+    end: "Thu Jun 30 2022 14:00:00",
     isFinished: false,
-    description: "icecream",
+    description: "car rego payment due",
+  },
+  {
+    start: "Thu Jun 30 2022 12:00:00",
+    end: "Thu Jun 30 2022 13:00:00",
+    isFinished: false,
+    description: "study lessons with group",
+  },
+  {
+    start: "Thu Jun 30 2022 16:00:00",
+    end: "Thu Jun 30 2022 16:00:00",
+    isFinished: false,
+    description: "visit Aunty for icecream",
   },
 ];
+
 var events = localStorage.events ?  JSON.parse(localStorage.events) : events_;
+
 function assignTask() {
 
   events.forEach((x) => {
     if (moment(x.start).format("DD/MM/YY") == moment().format("DD/MM/YY")) {
+      console.log(moment(x.start).format("DD/MM/YY"));
       const startTime = moment(x.start).format("H");
+      console.log(startTime)
       const endTime = moment(x.end).format("H");
       var row = document.getElementsByClassName("col-10");
       for (var i = 0; i < row.length; i++) {
@@ -94,20 +95,26 @@ $(".fa-save").click(function () {
   events.forEach((x) => {
     if (moment(x.start).format("DD/MM/YY") == moment().format("DD/MM/YY")) {
       const startTime = moment(x.start).format("H");
+      const endTime = moment(x.end).format("H");
       if(hour === startTime)
       {
         x.description = text;
-        localStorage.setItem('events', JSON.stringify(events));
+          localStorage.setItem('events', JSON.stringify(events));
         updated = true;
       } 
-
+      if ( moment(x.start).format("DD/MM/YY HH") < moment().format("DD/MM/YY HH") ) {
+      document.getElementById(id).classList.add("past");
+    } else if ( moment(x.start).format("DD/MM/YY HH") >
+      moment().format("DD/MM/YY HH") ) {
+      document.getElementById(id).classList.add("future");
+    } else {               document.getElementById(id).classList.add("present");
     }
-  });
-  if(!updated)
-  {
-    
+    }
 
-    const event = {
+  });
+
+  if(!updated)
+  { const event = {
       start:  newDate,  //change the format
       end:  moment(newDate).add(1, 'hours'),
       isFinished: false,
