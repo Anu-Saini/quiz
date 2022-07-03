@@ -38,8 +38,19 @@
 #b{
         height: 350px;
         border:2px solid black;
-
+      }
+      
+      
+#location{width:100%;
+  height: 300px;
+  background-color: aqua;
 }
+
+
+.columnA {
+  display: inline-block;
+}
+
       /*
       main {
         margin: 20px auto;

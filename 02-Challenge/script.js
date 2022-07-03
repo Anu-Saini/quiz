@@ -41,26 +41,23 @@ console.log(box.clouds);
 console.log(box.rain);
 console.log(box.weather[0].main);
 
-var list = document.createElement('ol');
+var list = document.createElement('ul');
 var temp1 = document.createElement('li');
 var wind1 = document.createElement('li');
 let pressure1 = document.createElement('li');
 let moist = document.createElement('li');
 
-
-temp1.textContent=(box.main.temp);
+temp1.innerText=`Temp: ${box.main.temp}`; 
 console.log(temp1)
 wind1.textContent=(box.wind.speed);
 console.log(wind1)
-// moist.textContent(box.main.humidity);
-// console.log(humid1)
-// pressure1.textContent(main.pressure);
-// console.log(pressure1)
+moist.textContent=(box.main.humidity);
+pressure1.textContent=(box.main.pressure);
+
 
 
 locationCity.append(list);
-temp1.textContent=(box.main.temp);
-list.append('Temp :'+(temp1));
+list.append(temp1);
 locationCity.innerHTML=box.name
 
 list.append(temp1);
