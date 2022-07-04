@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
         <link rel="stylesheet" href="style.css" />
         <title>All Weather app </title>
 </head>
 <body>
 
-        <body class="flex-column min-100-vh">
+        <body>
                 <header class="hero">
                   <h1 id="header"> Weather Dashboard </h1>
                 </header>
@@ -33,8 +34,9 @@
                       </div>
                     </div>
                   </div>
-                  <section class="container my-5 bg-dark text-light">
-                        <div id="location" class="card-A"> 
+                  <section class="col-9">
+                        <div id="card0" class="card-A"> 
+                         
                         
                         
 
@@ -44,36 +46,22 @@
                         <div id="repos-container" class="list-group"></div>
                         
                        <!-- bottom container-->
-                          <div class="columnA">
-                            <div class="box" id="a">
+                          <div class="row" >
+                            <div class="col-2 custom-card" id="card1">
+                             
+                            </div>
+                            <div class="col-2 custom-card" id="a2">
+                             </div>
+                            <div class="col-2 custom-card" id="a3">
+                             /div>
+                            <div class="col-2 custom-card" id="a4">
                               <h3>Title</h3>
                               <h5>3/12 columns on large, 6/12 columns on medium, full-width on small</h5>
                               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perspiciatis, debitis a perferendis error
                                 quaerat, nulla exercitationem minus, quam libero in ab obcaecati praesentium hic ipsum possimus voluptate modi
                                 eius?</p>
                             </div>
-                            <div class="box" id="b">
-                              <h3>Title</h3>
-                              <h5>3/12 columns on large, 6/12 columns on medium, full-width on small</h5>
-                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perspiciatis, debitis a perferendis error
-                                quaerat, nulla exercitationem minus, quam libero in ab obcaecati praesentium hic ipsum possimus voluptate modi
-                                eius?</p>
-                            </div>
-                            <div class="box" id="c">
-                              <h3>Title</h3>
-                              <h5>3/12 columns on large, 6/12 columns on medium, full-width on small</h5>
-                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perspiciatis, debitis a perferendis error
-                                quaerat, nulla exercitationem minus, quam libero in ab obcaecati praesentium hic ipsum possimus voluptate modi
-                                eius?</p>
-                            </div>
-                            <div class="box" id="d">
-                              <h3>Title</h3>
-                              <h5>3/12 columns on large, 6/12 columns on medium, full-width on small</h5>
-                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perspiciatis, debitis a perferendis error
-                                quaerat, nulla exercitationem minus, quam libero in ab obcaecati praesentium hic ipsum possimus voluptate modi
-                                eius?</p>
-                            </div>
-                            <div class="box" id="e">
+                            <div class="col-2 custom-card" id="a5">
                               <h3>Title</h3>
                               <h5>3/12 columns on large, 6/12 columns on medium, full-width on small</h5>
                               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat perspiciatis, debitis a perferendis error
@@ -86,6 +74,10 @@
                             </div>
 
                    
+                  </div>
+                  <div class="col-8 col-md-8">
+                    <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
+                    <div id="repos-container" class="list-group"></div>
                   </div>
                 </main>
               
