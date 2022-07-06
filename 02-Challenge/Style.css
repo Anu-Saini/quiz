@@ -33,20 +33,39 @@
      
 #maincard{width:100%;
   height: 400px;
- font-size: 25px;
+ font-size: 35px;
  padding:25px;
- margin:10px
-;
-color: black; 
+ margin:10px;
+ font-family:inherit;
+ color: black; 
+
 }
 ul {
   list-style-type: none;
 }
 
 .custom-card{
-  margin :auto;
+  margin :10px;
   background-color: bisque;
+  font-size: 25px;
+  height :500px;
+  width: auto;
+  display: flex;
+  flex-wrap: inherit;
+  min-height: 250px;
 }
+.row{
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+#cityname {
+  border: 2px solid black;
+}
+
+
 
       /*
       main {
@@ -57,21 +76,22 @@ ul {
       p {
         font-size: 1.2rem;
       }
-      
+*/      
       .btn {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        color: white;
         text-decoration: none;
-        padding: 6px 5px;
-        width: 100%;
+        padding:10px;
+        width: 65%;
         display: block;
-        margin: 5px 0;
-        border-radius: var(--border-radius);
-        color: var(--primary);
-        border: none;
+        margin-left: 50px;
+        border: 2px solid black;
         outline: none;
-        background-color: var(--light-dark);
+        background-color: grey;
         box-shadow: 3px 3px var(--dark);
         transform: translate(-1px, -1px);
+        align-items: center;
+        justify-content: center;
       }
       
       .btn:hover {
@@ -84,7 +104,7 @@ ul {
       .btn-inline {
         display: inline;
       }
-      
+  /*    
       .btn-back {
         border-radius: var(--border-radius);
         color: var(--primary);
@@ -156,17 +176,27 @@ ul {
       /* CARDS */
       .card {
         margin: 0 0 20px 0;
-        border: 3px solid var(--dark);
-        border-radius: var(--border-radius);
+        border: 3px solid black;
+        border-radius: 5px;
+      }
+
+      #card {
+        border: 3px solid black;
+        border-radius: 5px;
+        height: auto;
+        background-color: aqua;
       }
       
       .card-header {
-        color: var(--primary);
-        background-color: var(--dark);
+        color: black;
+        background-color:lightskyblue;
         padding: 2.5%;
         border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
       }
       
+      #citylist{
+        height:100%;
+      }
       .card-body {
         padding: 2.5%;
       }
@@ -200,11 +230,7 @@ ul {
       .min-100-vw {
         min-width: 100vw;
       }
-      
-      /* FONT UTILS */
-      .text-uppercase {
-        text-transform: uppercase;
-      }
+ 
       
       /* FLEX CONTENT */
       .flex-row {
