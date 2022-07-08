@@ -7,6 +7,7 @@ var a1 =document.querySelector('#card1');
 var box=[];
 
 let list = document.createElement('ul');
+
 var temp1 = document.createElement('li');
 var temp_max = document.createElement('li');
 let cloudy = document.createElement('li');
@@ -14,6 +15,24 @@ var wind1 = document.createElement('li');
 let pressure1 = document.createElement('li');
 let moist = document.createElement('li');
 let head=document.createElement('h3')
+
+//for city list counter
+var cityList = document.querySelector('#city-list')
+
+var cities=[];
+function renderCity() {
+cityList.innerHTML = "";
+
+for (var i=0;i<6;i++){
+  var cities = cities[i];
+  var li=document.createElement('li');
+  li.textContent=cities;
+  li.setAttribute("data-index",i);
+
+  cityList.appendChild(li);
+}
+}
+
 var formSubmitHandler = function (event) {
 event.preventDefault();
 
@@ -32,7 +51,9 @@ var city = nameInputEl.value.trim();
      return    response.json();})
      .then(function (data) {
 box=(data);
+console.log(data);
 
+var today = moment().format("DD,MMM,YYYY");
 
 
 temp1.innerText=`Temp: ${box.list[0].main.temp} ℃`;
@@ -42,7 +63,7 @@ wind1.innerText=`Wind: ${box.list[0].wind.speed} km/hr`;
 moist.innerText=`Humidity: ${box.list[0].main.humidity} g/kg`;
 pressure1.innerText=`Pressure: ${box.list[0].main.pressure} kPa`;
 
-head.innerText= `City : ${box.city.name}`;
+head.innerText= `City : ${box.city.name}  ( on ${today} )`;
 
 locationCity.append(head);
 console.log(locationCity)
@@ -63,6 +84,7 @@ for ( i=1 ; i<=5 ; i++) {
   var wind1_ = document.createElement('li');
   let pressure1_ = document.createElement('li');
   let moist_ = document.createElement('li');
+  let date = document.createElement('h5');
 
 temp1_.innerText=`Temp: ${box.list[i].main.temp} ℃`;
 temp_max_.innerText=`Temp: ${box.list[i].main.temp_max} ℃`;
@@ -71,7 +93,13 @@ wind1_.innerText=`Wind: ${box.list[i].wind.speed} km/hr`;
 moist_.innerTextt=`Humidity: ${box.list[i].main.humidity} g/kg`;
 pressure1_.innerText=`Pressure: ${box.list[i].main.pressure} kPa`;
 
+var duedate=moment().add(i,'days').format("DD,MMM,YYYY"); 
+date.innerText=`${duedate}`;
+
+console.log(duedate);
+
 let id=`day${i}`; 
+
 var customref=document.getElementById(id) 
 //customid.append(list);
 
@@ -83,7 +111,7 @@ let head_=document.createElement('h3')
 // let now = moment();
 // console.log(now.format("L"));
 
-
+list_.append(date);
 list_.append(temp1_);
 list_.append(temp_max_);
 list_.append(cloudy_);
@@ -104,7 +132,8 @@ cityFormEl.addEventListener('submit', formSubmitHandler)
 
 
 
-
+//var today = moment();
+//$("#maincard").text(today.format("dd, MM, YYYY"));
 
 
 
