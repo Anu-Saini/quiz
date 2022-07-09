@@ -14,7 +14,7 @@ let cloudy = document.createElement('li');
 var wind1 = document.createElement('li');
 let pressure1 = document.createElement('li');
 let moist = document.createElement('li');
-let head=document.createElement('h3')
+let head=document.createElement('h5')
 
 //for city list counter
 var cityList = document.querySelector('#city-list')
@@ -22,13 +22,16 @@ var cityList = document.querySelector('#city-list')
 var cities=[];
 function renderCity() {
 cityList.innerHTML = "";
+const length = cities.length >5?5:cities.length;
 
-for (var i=0;i<6;i++){
-  var cities = cities[i];
+for (var i=0;i<length;i++){
   var li=document.createElement('li');
-  li.textContent=cities;
+  let a=document.createElement('a');
+  a.onclick=function(){
+   inputCity(cities[i]);}
+  a.textContent=cities[i];
   li.setAttribute("data-index",i);
-
+    li.appendChild(a);
   cityList.appendChild(li);
 }
 }
@@ -40,10 +43,16 @@ var city = nameInputEl.value.trim();
  if (city) {
       repoContainerEl.textContent = '';
      nameInputEl.value = '';
+     cities.push(city);
+     inputCity(city);
+    
    } else {
      alert('Please enter a City name');
    }
-  var requestedUrl ='https://api.openweathermap.org/data/2.5/forecast?q='+city+'&id=524901&appid=9b1192177659da66737e8df6341c92d7&units=metric'
+ }  
+  
+  function inputCity(city){
+   var requestedUrl ='https://api.openweathermap.org/data/2.5/forecast?q='+city+'&id=524901&appid=9b1192177659da66737e8df6341c92d7&units=metric'
 
   fetch(requestedUrl)
        .then(function (response) {
@@ -53,7 +62,7 @@ var city = nameInputEl.value.trim();
 box=(data);
 console.log(data);
 
-var today = moment().format("DD,MMM,YYYY");
+var today = moment().format("DD/MM/YYYY");
 
 
 temp1.innerText=`Temp: ${box.list[0].main.temp} ℃`;
@@ -93,7 +102,7 @@ wind1_.innerText=`Wind: ${box.list[i].wind.speed} km/hr`;
 moist_.innerTextt=`Humidity: ${box.list[i].main.humidity} g/kg`;
 pressure1_.innerText=`Pressure: ${box.list[i].main.pressure} kPa`;
 
-var duedate=moment().add(i,'days').format("DD,MMM,YYYY"); 
+var duedate=moment().add(i,'days').format("DD/MM/YYYY"); 
 date.innerText=`${duedate}`;
 
 console.log(duedate);
@@ -125,9 +134,11 @@ if(prevChild.length > 0)
 customref.append(head_);
 }
 });
-}
+renderCity()
+};
 
 cityFormEl.addEventListener('submit', formSubmitHandler)
+
 
 
 

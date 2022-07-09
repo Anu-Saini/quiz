@@ -14,24 +14,21 @@
 
         <body>
                 <header class="hero">
-                  <h1 id="header"> Weather Dashboard </h1>
+                  <h3 id="header"> Weather Dashboard </h3>
                 </header>
              <main class="flex-row">
                   <div class="col-3">
                     <div class="card">
-                       <h3 class="card-header">Search for a City:</h3>
                           <form id="city-form" class="card-body">
-                          <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input">
-                           </br>
-                           <button type="submit" class="btn">Search</button>
+                          <input name="cityname" placeholder="Search" id="cityname" type="text" autofocus="true" class="form-input">
+                          <button type="submit" class="btn btn-outline-secondary">Search</button>
                            </form>
-                         <ul id="city-list">  </ul> 
-                    </div>
+                        </div>
               
                     <div class="card">
-                       <h3 class="card-header" id="card">Previously searched for following cities</h3>
+                       <h5 class="card-header" id="card">History</h5>
                          <div id="citylist">
-                          
+                          <ul id="city-list">  </ul>  
                          </div>    
                     </div>
                   </div>
@@ -40,7 +37,7 @@
                  <div id="maincard" > 
                                    
                  </div>
-                    <h2 class="subtitle">Showing next 5 day forecast for the selected city <span id="city-search-term"></span></h2>
+                    <h5>Showing next 5 day: </h5>
                                            
                        <!-- bottom container-->
                           <div class="row" >
@@ -62,7 +59,7 @@
                 </section>
                                    
                 <div class="col-12">
-                    <h2 class="subtitle">weather forecast being presented with help of Openweather API <span id="repo-search-term"></span></h2>
+                    <h5>weather forecast being presented with help of Openweather API <span id="repo-search-term"></span></h5>
                     <div id="repos-container" class="list-group"></div>
                   </div>
                 </main>
