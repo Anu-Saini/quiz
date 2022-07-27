@@ -15,29 +15,29 @@
 
 <a name="username"></a>
 ## User name
-anu
+Anu.saini
 <a name="email"></a>
 ## User email
-anu
+anu@yah
 <a name="title"></a>
 ## Project Name
-anu
+javascriptmodules
 <a name="description"></a>
 ## Description of the project
-anu
+test
 <a name="licence"></a>
 ## Type of licence required for the running the project
 undefined
 <a name="installation"></a>
 ## To Install the application on your device, please run the below command
-ánu
+anik
 <a name="tests"></a>
 ## To run testing on the applicaiton please run the below command 
-'anu'
+adad
 <a name="information"></a>
 ## Points to note before using the application 
-anu
+asfasdf
 <a name="contributors"></a>
   ## Important information that users need to be aware off before contributing to code 
-anu
-  ## For any questions or suggestions, please contact  anu    @    anu
+sdfdsf
+  ## For any questions or suggestions, please contact  Anu.saini    @    anu@yah
