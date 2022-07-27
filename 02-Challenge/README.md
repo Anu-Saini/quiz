@@ -15,29 +15,29 @@
 
 <a name="username"></a>
 ## User name
-Anu.saini
+Anu_Saini
 <a name="email"></a>
 ## User email
-anu@yah
+anuraagsaini@yahoo.com
 <a name="title"></a>
 ## Project Name
-javascriptmodules
+READMEGenerator
 <a name="description"></a>
 ## Description of the project
-test
+test project for writing a README.md file dynamically using node.js
 <a name="licence"></a>
 ## Type of licence required for the running the project
 undefined
 <a name="installation"></a>
 ## To Install the application on your device, please run the below command
-anik
+npm install, npm init
 <a name="tests"></a>
 ## To run testing on the applicaiton please run the below command 
-adad
+FS, inquirer, module exports
 <a name="information"></a>
 ## Points to note before using the application 
-asfasdf
+general understanding of coding process and functionality with node.js
 <a name="contributors"></a>
   ## Important information that users need to be aware off before contributing to code 
-sdfdsf
-  ## For any questions or suggestions, please contact  Anu.saini    @    anu@yah
+needs to be awareand hands on experience with javascript coding and libraries.
+  ## For any questions or suggestions, please contact  Anu_Saini    @    anuraagsaini@yahoo.com
