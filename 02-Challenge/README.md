@@ -1,5 +1,5 @@
 
-# README.md Project generator  
+# Project README.md file generator  
 
 ## Table of content
  - [username](#username) 
@@ -15,29 +15,29 @@
 
 <a name="username"></a>
 ## User name
-Anu.Saini
+anu
 <a name="email"></a>
 ## User email
-anuraag@yahoo.co.in
+anu
 <a name="title"></a>
 ## Project Name
-JavascriptModules
+anu
 <a name="description"></a>
 ## Description of the project
-test project for the new functionality
+anu
 <a name="licence"></a>
 ## Type of licence required for the running the project
 undefined
 <a name="installation"></a>
-## To Install the application on your device, please run the below command 
-npm install
+## To Install the application on your device, please run the below command
+ánu
 <a name="tests"></a>
 ## To run testing on the applicaiton please run the below command 
-node index.js
+'anu'
 <a name="information"></a>
 ## Points to note before using the application 
-user needs bit familarity with the ciding and understadning of bais functionality of the code and functions and argument syntax
+anu
 <a name="contributors"></a>
   ## Important information that users need to be aware off before contributing to code 
-need to be aware of writing the coding 
-  ## for any Questions or suggestions, please contact Anu.Saini @ anuraag@yahoo.co.in
+anu
+  ## For any questions or suggestions, please contact  anu    @    anu
